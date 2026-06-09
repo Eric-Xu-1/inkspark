@@ -1,0 +1,64 @@
+research_task:
+  description: >
+    用户想要撰写关于"{topic}"的深度文章，要求如下："{requirements}"。
+    请搜索相关在线资料和当前趋势。
+    提出3个独特的文章写作角度/主题。
+    对于每个角度，请提供：
+    1. 标题
+    2. 目标读者
+    3. 核心论点
+    4. 关键内容要点
+    
+    最后输出一份简要的调研摘要（200字以内）。
+    请确保输出清晰易读，使用中文。
+  expected_output: >
+    包含3个写作角度提案和调研摘要。
+  agent: xiao_mei
+
+outline_task:
+  description: >
+    用户想要撰写关于"{topic}"的深度文章，要求如下："{requirements}"。
+    基于选定的写作角度："{chosen_direction}"，创建一个详细的文章大纲。
+    大纲应包含章节列表（至少3节，最多6节）。
+    对于每一节，请提供标题和内容的简要摘要。
+    
+    重要：请将输出格式化为JSON字符串，键为"title"（文章标题）和"sections"（章节列表），
+    sections 中每个对象具有"title"（标题）和"summary"（摘要）字段。
+    不要在JSON中添加markdown格式。
+    JSON 示例: {{"title": "文章标题", "sections": [{{"title": "第一节...", "summary": "..."}}, ...]}}
+  expected_output: >
+    JSON格式的文章大纲。
+  agent: xiao_qing
+
+section_writing_task:
+  description: >
+    用户想要撰写关于"{topic}"的深度文章，要求如下："{requirements}"。
+    编写第 {section_index} 节的内容："{section_title}"。
+    摘要：{section_summary}
+    背景：这是文章"{article_title}"的一部分。
+    请为这一节编写一篇全面、深入且具有专业性的内容。使用中文。
+    适当使用上标引用标注（如 ¹ ²），并在段落末尾用括号标注来源类型（如（权威数据）、（官方确认））。
+    重要格式要求：
+    - 不要输出章节标题或文章总标题，直接从正文第一段开始。
+    - 不要重复输出摘要内容。
+  expected_output: >
+    Markdown格式的章节正文（不含标题）。
+  agent: xiao_qing
+
+review_task:
+  description: >
+    用户想要撰写关于"{topic}"的深度文章，要求如下："{requirements}"。
+    审核以下文章内容，文章名称："{article_title}"。
+    内容：
+    {article_content}
+    
+    检查项：
+    1. 是否符合最初的方向："{chosen_direction}"
+    2. 事实准确性和逻辑连贯性
+    3. 语法和风格错误
+    4. 清晰度和流畅度
+    
+    请提供一份包含改进建议的审核报告，如果内容很好则给予批准。使用中文。
+  expected_output: >
+    审核报告。
+  agent: xiao_yin

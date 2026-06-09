@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+}
+
+.markdown-body h1 { @apply text-2xl font-bold mb-4 text-gray-900; }
+.markdown-body h2 { @apply text-xl font-semibold mb-3 mt-6 text-gray-900; }
+.markdown-body h3 { @apply text-lg font-medium mb-2 mt-4 text-gray-800; }
+.markdown-body h4 { @apply text-base font-medium mb-2 mt-3 text-gray-800; }
+.markdown-body p { @apply mb-3 leading-relaxed text-gray-700; }
+.markdown-body ul { @apply list-disc pl-5 mb-3; }
+.markdown-body ol { @apply list-decimal pl-5 mb-3; }
+.markdown-body li { @apply mb-1 text-gray-700; }
+.markdown-body blockquote {
+  @apply border-l-4 border-gray-300 pl-4 my-4 text-gray-600 italic;
+}
+.markdown-body code {
+  @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+.markdown-body pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 text-sm;
+}
+.markdown-body pre code {
+  @apply bg-transparent text-inherit p-0 rounded-none;
+}
+.markdown-body hr {
+  @apply my-6 border-t border-gray-200;
+}
+.markdown-body strong { @apply font-semibold text-gray-900; }
+.markdown-body em { @apply italic; }
+.markdown-body sup {
+  @apply text-xs text-blue-600 font-medium align-super;
+}
+.markdown-body a {
+  @apply text-blue-600 underline hover:text-blue-800;
+}
+.markdown-body table {
+  @apply w-full border-collapse mb-4 text-sm;
+}
+.markdown-body th {
+  @apply border border-gray-300 bg-gray-50 px-3 py-2 text-left font-medium;
+}
+.markdown-body td {
+  @apply border border-gray-300 px-3 py-2;
+}
+.markdown-body .source-tag {
+  @apply text-xs text-gray-400 not-italic;
+}
+
+.article-body h1 {
+  @apply text-3xl font-bold mb-6 text-gray-900 leading-tight;
+}
+.article-body h2 {
+  @apply text-xl font-semibold mb-4 mt-8 pt-2 text-gray-900 border-t border-gray-100;
+}
+.article-body h2:first-of-type {
+  @apply mt-0 pt-0 border-t-0;
+}
+.article-body p {
+  @apply mb-4 leading-7 text-gray-700;
+}

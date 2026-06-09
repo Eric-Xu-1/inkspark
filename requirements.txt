@@ -1,0 +1,13 @@
+crewai
+crewai-tools
+langchain_openai
+python-dotenv
+pyyaml
+redis
+grpcio
+grpcio-tools
+protobuf>=6.31.1
+fastapi
+uvicorn[standard]
+sse-starlette
+
