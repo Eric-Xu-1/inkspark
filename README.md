@@ -144,3 +144,12 @@ project5_2/
 
 - [系统设计文档](docs/inkspark-design.md) — 架构、数据模型、API 契约、验收标准
 - [后端面试 QA](docs/backend-interview-qa.md) — 面向后端岗位的技术问答梳理
+
+
+## 演示
+
+
+
+https://github.com/user-attachments/assets/7e77a75b-b959-4681-a184-18bc94775fb8
+
+
